@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <product-nav></product-nav>
+  <product-main></product-main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import productNav from "@/components/productNav.vue";
+import productAnswers from "@/components/productAnswers.vue";
+import productBlog from "@/components/productBlog.vue";
+import productMain from "@/components/productMain.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { productNav, productAnswers, productBlog, productMain },
+};
 </script>
 
 <style lang="scss">
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #2e3a59;
 }
 </style>

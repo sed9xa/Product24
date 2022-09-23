@@ -1,6 +1,9 @@
 <template>
   <product-nav></product-nav>
   <product-main></product-main>
+  <footer class="footer">
+    <product-blog></product-blog><product-answers></product-answers>
+  </footer>
 </template>
 
 <script>
@@ -32,5 +35,9 @@ h3 {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2e3a59;
+}
+.footer{
+  display: flex;
+  height: 830px;
 }
 </style>

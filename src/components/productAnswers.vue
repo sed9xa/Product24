@@ -71,14 +71,19 @@ export default {
   methods: {
     textToggle(id) {
       for (let i = 0; i < this.answers.length; i++) {
-        this.answers[i].active = false;
+        //this.answers[i].active = false;
         if (this.answers[i].id === id) {
-          if (this.answers[i].active) {
+          console.log(this.answers[i].id, id, this.answers[i].active);
+          if (this.answers[i].active === true) {
             this.answers[i].active = false;
-          } else {
+          } else if (this.answers[i].active === false) {
             this.answers[i].active = true;
           }
         }
+        else{
+          this.answers[i].active = false;
+        }
+        
       }
     },
   },
@@ -109,5 +114,10 @@ export default {
 }
 .answers__toggler:last-child {
   border: none;
+}
+@media (max-width: 600px) {
+  .answers__container{
+    margin: 0 30px;
+  }
 }
 </style>

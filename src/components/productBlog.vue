@@ -92,20 +92,20 @@ export default {
   padding-left: 70px;
 }
 .bigitem__content::after,
-.bigitem__content::before{
-    position: absolute;
-    content: '';
-    background-image: url('@/assets/images/commas.svg');
-    width: 40px;
-    height: 26px;
+.bigitem__content::before {
+  position: absolute;
+  content: "";
+  background-image: url("@/assets/images/commas.svg");
+  width: 40px;
+  height: 26px;
 }
 .bigitem__content::before {
-    transform: rotate(180deg);
-    left: 15px;
+  transform: rotate(180deg);
+  left: 15px;
 }
 .bigitem__content::after {
-    bottom: 0px;
-    right: 15px;
+  bottom: 0px;
+  right: 15px;
 }
 .bigitem__content-text {
   margin-bottom: 15px;
@@ -137,5 +137,43 @@ export default {
   transform: translateY(-5px);
   margin-right: 20px;
 }
-
+@media (max-width: 700px) {
+  .blog__container {
+    margin: 70px 15px;
+  }
+  .blog__bigitem {
+    flex-direction: column;
+    box-shadow: 0px 8px 16px rgba(0, 195, 104, 0.24);
+    border-radius: 32px;
+    padding-bottom: 15px;
+  }
+  .bigitem__content {
+    padding: 0 10px;
+  }
+  .bigitem__content-text {
+    text-align: center;
+  }
+  .bigitem__content-author {
+    text-align: center;
+  }
+  .bigitem__content::after,
+  .bigitem__content::before {
+    background-image: url("@/assets/images/commasGray.svg");
+    top: -20%;
+  }
+  
+  .blog__smallitems {
+    flex-direction: column-reverse;
+  }
+  .blog__smallitem {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width:400px) {
+  .bigitem__img{
+    width: 100px;
+    height: 100px;
+  }
+}
 </style>

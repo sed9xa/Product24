@@ -15,6 +15,7 @@
 
       <img
         @click="this.$emit('textToggle', answer.id)"
+        :class="{ rotated: answer.active }"
         src="@/assets/images/arrowIcon.svg"
         alt=""
         class="toggler__arrow"
@@ -36,7 +37,7 @@ export default {
 
 <style>
 .answer__toggler {
-    padding: 15px 0;
+  padding: 15px 0;
 }
 .toggler__show {
   display: flex;
@@ -62,12 +63,31 @@ export default {
 }
 .toggler__arrow {
   cursor: pointer;
+  transition: 0.2s;
 }
 .toggler__hide {
+  transition: 0.2s;
 }
 .toggler__text {
   max-width: 560px;
   margin-left: 65px;
   text-align: left;
+}
+.rotated {
+  transform: rotate(180deg);
+}
+@media (max-width: 800px) {
+  .toggler__pic {
+    display: none;
+  }
+  .toggler__title {
+    font-size: 16px;
+    text-align: left;
+  }
+  .toggler__text{
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: left;
+  }
 }
 </style>

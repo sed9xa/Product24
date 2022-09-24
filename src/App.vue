@@ -2,7 +2,8 @@
   <product-nav></product-nav>
   <product-main></product-main>
   <footer class="footer">
-    <product-blog></product-blog><product-answers></product-answers>
+    <product-blog class="footer__blog"></product-blog
+    ><product-answers class="footer__answers"></product-answers>
   </footer>
 </template>
 
@@ -36,8 +37,20 @@ h3 {
   text-align: center;
   color: #2e3a59;
 }
-.footer{
+.footer {
   display: flex;
   min-height: 830px;
+}
+@media (max-width: 1400px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .footer__blog {
+    width: 100%;
+  }
+  .footer__answers {
+    width: 100%;
+    min-height: 700px;
+  }
 }
 </style>

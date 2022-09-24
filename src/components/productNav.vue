@@ -22,7 +22,7 @@
             >
           </div>
         </div>
-        <nav-item class="navbat__exit">Button</nav-item>
+        <nav-item class="navbar__exit">Button</nav-item>
       </div>
     </div>
   </nav>
@@ -76,9 +76,27 @@ export default {
 }
 .navbar_item {
   margin-left: 8vw;
-   transition: 0.2s;
+  transition: 0.2s;
 }
-.navbat__exit {
+.navbar__exit {
   height: 32px;
+}
+@media (max-width: 1000px) {
+  .navbar_item {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 800px) {
+  .navbar_item {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .navbar__exit {
+    display: none;
+  }
+  .navbar__logo-img{
+    width: 100%;
+  }
 }
 </style>

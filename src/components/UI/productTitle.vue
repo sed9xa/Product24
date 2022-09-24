@@ -20,4 +20,9 @@ export default {};
   font-weight: 700;
   font-size: 40px;
 }
+@media (max-width: 600px) {
+  .product__title{
+    font-size: 24px;
+  }
+}
 </style>

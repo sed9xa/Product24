@@ -6,17 +6,17 @@
       >
       <div class="main__berry">
         <div class="main__berry-first main__berry-block">
-          <berry-block :imgSrc="require('@/assets/images/mainIcons/headphones.svg')"
+          <berry-block :imgSrc="'headphones'"
             >Lorem ipsum dolor sit amet consectetur, adipisicing
             elit.</berry-block
           >
-          <berry-block :imgSrc="require('@/assets/images/mainIcons/circleSquare.svg')"
+          <berry-block :imgSrc="'ellipseCircle'"
             >Lorem ipsum dolor sit amet consectetur, adipisicing
             elit.</berry-block
           >
         </div>
         <div class="main__berry-second main__berry-block">
-          <berry-block :imgSrc="require('@/assets/images/mainIcons/pad.svg')"
+          <berry-block :imgSrc="'pad'"
             >Lorem ipsum dolor sit amet consectetur, adipisicing
             elit.</berry-block
           >
@@ -25,17 +25,17 @@
             src="@/assets/images/mainBerry.png"
             alt=""
           />
-          <berry-block :imgSrc="require('@/assets/images/mainIcons/ellipseSquare.svg')"
+          <berry-block :imgSrc="'ellipseCircle'"
             >Lorem ipsum dolor sit amet consectetur, adipisicing
             elit.</berry-block
           >
         </div>
         <div class="main__berry-third main__berry-block">
-          <berry-block :imgSrc="require('@/assets/images/mainIcons/headphones.svg')"
+          <berry-block :imgSrc="'headphones'"
             >Lorem ipsum dolor sit amet consectetur, adipisicing
             elit.</berry-block
           >
-          <berry-block :imgSrc="require('@/assets/images/mainIcons/circleSquare.svg')"
+          <berry-block :imgSrc="'circleSquare'"
             >Lorem ipsum dolor sit amet consectetur, adipisicing
             elit.</berry-block
           >

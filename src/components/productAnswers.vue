@@ -73,7 +73,6 @@ export default {
       for (let i = 0; i < this.answers.length; i++) {
         //this.answers[i].active = false;
         if (this.answers[i].id === id) {
-          console.log(this.answers[i].id, id, this.answers[i].active);
           if (this.answers[i].active === true) {
             this.answers[i].active = false;
           } else if (this.answers[i].active === false) {
@@ -98,16 +97,12 @@ export default {
 .answers__container {
   margin: 70px 80px 0;
 }
-.answers__inner {
-}
 .answers__title {
   max-width: 500px;
   margin: 0 auto 15px;
 }
 .answers__subtitle {
   margin-bottom: 25px;
-}
-.answers__togglers {
 }
 .answers__toggler {
   border-bottom: 1px solid #e7ebf0;

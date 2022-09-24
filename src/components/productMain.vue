@@ -61,12 +61,6 @@ export default {
   background-position: center;
   background-image: url("@/assets/images/mainBg.png");
 }
-.main__title-block {
-}
-.main__inner {
-}
-.main__title-block {
-}
 .main__berry {
   max-width: 950px;
   margin: 70px auto 0;

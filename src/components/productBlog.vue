@@ -76,8 +76,6 @@ export default {
 .blog__container {
   margin: 70px 73px 0;
 }
-.blog__inner {
-}
 .blog__title {
   margin-bottom: 49px;
 }
@@ -86,8 +84,7 @@ export default {
   align-items: center;
   margin-bottom: 134px;
 }
-.bigitem__img {
-}
+
 .bigitem__content {
   position: relative;
   text-align: left;
@@ -121,8 +118,6 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-.blog__smallitem-left {
-}
 .blog__smallitem {
   display: flex;
   width: 49%;
@@ -142,6 +137,5 @@ export default {
   transform: translateY(-5px);
   margin-right: 20px;
 }
-.blog__smallitem-right {
-}
+
 </style>

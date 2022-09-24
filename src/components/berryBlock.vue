@@ -17,8 +17,7 @@ export default {
 .berry__block {
   max-width: 200px;
 }
-.berry__block-img {
-}
-.berry__block-text {
+.berry__block-img{
+  fill: green;
 }
 </style>

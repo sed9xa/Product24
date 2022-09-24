@@ -12,6 +12,8 @@
           </a>
           <div class="navbar__items">
             <nav-item
+              @mouseenter="item.disabled = false"
+              @mouseleave="item.disabled = true"
               class="navbar_item"
               v-for="item in navItems"
               :key="item.id"
@@ -34,7 +36,7 @@ export default {
       navItems: [
         { id: "1", text: "NavItem1", disabled: true },
         { id: "2", text: "NavItem2", disabled: true },
-        { id: "3", text: "NavItem3", disabled: false },
+        { id: "3", text: "NavItem3", disabled: true },
       ],
     };
   },
@@ -55,10 +57,10 @@ export default {
   margin: 0 4vw;
   flex-grow: 1;
 }
-.navbar__inner{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .navbar__links {
   display: flex;
@@ -74,6 +76,7 @@ export default {
 }
 .navbar_item {
   margin-left: 8vw;
+   transition: 0.2s;
 }
 .navbat__exit {
   height: 32px;

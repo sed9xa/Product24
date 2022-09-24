@@ -38,6 +38,6 @@ h3 {
 }
 .footer{
   display: flex;
-  height: 830px;
+  min-height: 830px;
 }
 </style>

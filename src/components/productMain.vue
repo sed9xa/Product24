@@ -44,9 +44,6 @@
       <div class="berry__swiper">
         <h1 class="swiper__title">Lorem ipsum, dolor sit amet consectetur</h1>
         <swiper
-        
-          @swiper="onSwiper"
-          @slideChange="onSlideChange"
           :loop="true"
           :modules="modules"
           :navigation="{ nextEl: '.nextArrow', prevEl: '.prevArrow' }"
@@ -115,16 +112,7 @@ import productTitle from "./UI/productTitle.vue";
 export default {
   components: { berryBlock, productTitle, Swiper, SwiperSlide },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-      
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
     return {
-      onSwiper,
-      onSlideChange,
       modules: [Navigation, Pagination],
     };
   },

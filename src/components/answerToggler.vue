@@ -21,9 +21,11 @@
         class="toggler__arrow"
       />
     </div>
-    <div class="toggler__hide" v-if="answer.active">
-      <p class="toggler__text">{{ answer.text }}</p>
-    </div>
+    <transition name="list"
+      ><div class="toggler__hide" v-if="answer.active">
+        <p class="toggler__text">{{ answer.text }}</p>
+      </div></transition
+    >
   </div>
 </template>
 
@@ -51,8 +53,7 @@ export default {
   background-color: #e7ebf0;
   margin-right: 24px;
 }
-.toggler__pic-img {
-}
+
 .toggler__title-block {
   display: flex;
   align-items: center;
@@ -76,6 +77,15 @@ export default {
 .rotated {
   transform: rotate(180deg);
 }
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+}
 @media (max-width: 800px) {
   .toggler__pic {
     display: none;
@@ -84,7 +94,7 @@ export default {
     font-size: 16px;
     text-align: left;
   }
-  .toggler__text{
+  .toggler__text {
     margin-left: 0;
     margin-top: 10px;
     text-align: left;

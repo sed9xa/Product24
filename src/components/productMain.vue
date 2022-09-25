@@ -121,12 +121,10 @@ export default {
 
 <style lang="scss">
 .main {
-  max-height: 950px;
   padding-top: 75px;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("@/assets/images/mainBg.png");
-  padding-bottom: 70px;
 }
 .main__berry {
   max-width: 950px;
@@ -151,6 +149,7 @@ export default {
 .main__berry-third {
   width: 450px;
   margin-top: -60px;
+  padding-bottom: 100px;
 }
 .berry__swiper {
   display: none;
@@ -185,7 +184,7 @@ export default {
 }
 .prevArrow {
   top: 25px;
-  left: 30%;
+  left: 25%;
 }
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
@@ -220,9 +219,6 @@ export default {
   width: 150px;
 }
 @media (max-width: 1000px) {
-  .main {
-    padding-bottom: 0;
-  }
   .main__berry {
     margin: 0;
   }

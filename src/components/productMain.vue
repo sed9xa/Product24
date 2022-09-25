@@ -44,9 +44,12 @@
       <div class="berry__swiper">
         <h1 class="swiper__title">Lorem ipsum, dolor sit amet consectetur</h1>
         <swiper
+        
+          @swiper="onSwiper"
+          @slideChange="onSlideChange"
           :loop="true"
           :modules="modules"
-          :navigation="{ nextEl: '.nextArrow', prevtEl: '.prevArrow' }"
+          :navigation="{ nextEl: '.nextArrow', prevEl: '.prevArrow' }"
           :pagination="{
             clickable: true,
             el: '.swiper-pagination',
@@ -91,7 +94,7 @@
             ></swiper-slide
           >
 
-          <div class="prevArrow"></div>
+          <div class="prevArrow" @click="onSwiper"></div>
           <div class="swiper-pagination"></div>
           <div class="nextArrow"></div>
         </swiper>
@@ -112,7 +115,16 @@ import productTitle from "./UI/productTitle.vue";
 export default {
   components: { berryBlock, productTitle, Swiper, SwiperSlide },
   setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+      
+    };
+    const onSlideChange = () => {
+      console.log("slide change");
+    };
     return {
+      onSwiper,
+      onSlideChange,
       modules: [Navigation, Pagination],
     };
   },
@@ -220,7 +232,7 @@ export default {
   width: 150px;
 }
 @media (max-width: 1000px) {
-  .main{
+  .main {
     padding-bottom: 0;
   }
   .main__berry {
